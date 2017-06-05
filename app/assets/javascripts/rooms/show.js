@@ -1,4 +1,4 @@
-const Message = (() => {
+const roomsShow = (() => {
 
   function init() {
     _bindFunctions()
@@ -10,7 +10,7 @@ const Message = (() => {
 
   function _sendMessage(e) {
     if (e.keyCode === 13) {
-      App.room.speak(e.target.value)
+      App.room.speak({ content: e.target.value })
       event.target.value = ''
       event.preventDefault()
     }

@@ -2,12 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 App.room = App.cable.subscriptions.create "RoomChannel",
-  connected: -> # Called when the subscription is ready for use on the server
+  connected: ->
 
-  disconnected: -> # Called when the subscription has been terminated by the server
+  disconnected: ->
 
   received: (data) -> # Called when there's incoming data on the websocket for this channel
-    alert(data['message'])
+    $('#messages').append data.message
 
   speak: (message) ->
     @perform 'speak', message: message
