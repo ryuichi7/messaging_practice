@@ -1,11 +1,26 @@
 .navBar {
-  @extend .navbar;
-  @extend .navbar-default;
-   
   background-color: $light_blue;
 
-  .navBar__navContainer {
-    @extend .container-fluid;
-    a { color: $light_grey; }
+  a.navbar-brand {
+    color: $light_grey;
+
+    &:hover, &:focus {
+      color: $powder_blue;
+    }
+  }
+
+  .navBar__dropdown {
+    a.dropdown-toggle {
+      color: $light_grey;
+
+      &:hover, &:focus {
+        color: $powder_blue;
+      }
+    }
+  }
+
+  .open > a.dropdown-toggle,
+  .open > a.dropdown-toggle:focus {
+    background-color: $light_blue;
   }
 }

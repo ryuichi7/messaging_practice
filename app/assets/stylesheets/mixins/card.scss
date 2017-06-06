@@ -1,0 +1,7 @@
+@mixin center_card($col, $col-offset) {
+  @include make-md-column($col);
+  @include make-md-column-offset($col-offset);
+  padding: 15px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}

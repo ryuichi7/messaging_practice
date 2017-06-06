@@ -14,6 +14,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "constants/*";
+ @import "mixins/*";
  @import "rooms/show";
  @import "devise/**/*";
  @import "layouts/*";
