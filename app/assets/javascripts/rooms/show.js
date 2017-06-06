@@ -2,6 +2,7 @@ const roomsShow = (() => {
 
   function init() {
     _bindFunctions()
+    scrollToMessageBottom()
   }
 
   function _bindFunctions() {
@@ -16,7 +17,18 @@ const roomsShow = (() => {
     }
   }
 
+  function addMessage(data) {
+    $('#messages').append(data.message)
+  }
+
+  function scrollToMessageBottom() {
+    let $target = $('.current-chat-area')
+    $target.animate({ scrollTop: $target.prop("scrollHeight") });
+  }
+
   return {
-    init: init
+    init: init,
+    addMessage: addMessage,
+    scrollToMessageBottom: scrollToMessageBottom
   }
 })();
