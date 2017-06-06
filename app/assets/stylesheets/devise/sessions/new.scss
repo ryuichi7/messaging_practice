@@ -1,0 +1,6 @@
+.signIn {
+  .card {
+    @include center_card(4, 4);
+    min-height: 75vh;
+  }
+}
