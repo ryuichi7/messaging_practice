@@ -1,6 +1,12 @@
 .navBar {
   background-color: $light_blue;
+  // min-height: 65px;
 
+  &.navbar {
+    border: none;
+    border-radius: 0px
+
+  }
   a.navbar-brand {
     color: $light_grey;
 
