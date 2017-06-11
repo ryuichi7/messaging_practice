@@ -1,7 +1,7 @@
-class RoomsController < ApplicationController
+class MessagesController < ApplicationController
   before_action :authenticate_user!
 
-  def show
+  def index
    @messages = Message.all
   end
 end

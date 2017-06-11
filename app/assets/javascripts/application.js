@@ -18,5 +18,5 @@
 //= require_tree .
 
 $(document).on("turbolinks:load", () => {
-  roomsShow.init();
+  messagesIndex.init();
 });

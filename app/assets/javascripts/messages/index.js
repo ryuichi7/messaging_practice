@@ -1,4 +1,4 @@
-const roomsShow = (() => {
+const messagesIndex = (() => {
 
   function init() {
     _bindFunctions()
