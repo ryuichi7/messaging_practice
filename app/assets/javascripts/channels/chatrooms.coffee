@@ -1,4 +1,4 @@
-App.chat = App.cable.subscriptions.create "ChatChannel",
+App.chatrooms = App.cable.subscriptions.create "ChatroomsChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
 
@@ -6,8 +6,8 @@ App.chat = App.cable.subscriptions.create "ChatChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) -> # Called when there's incoming data on the websocket for this channel
-    messagesIndex.addMessage(data)
-    messagesIndex.scrollToMessageBottom()
+    chatroomsIndex.addMessage(data)
+    chatroomsIndex.scrollToMessageBottom()
 
   speak: (message) ->
     @perform 'speak', message: message

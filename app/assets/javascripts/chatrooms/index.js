@@ -1,4 +1,4 @@
-const messagesIndex = (() => {
+const chatroomsIndex = (() => {
 
   function init() {
     _bindFunctions()
@@ -11,7 +11,7 @@ const messagesIndex = (() => {
 
   function _sendMessage(e) {
     if (e.keyCode === 13) {
-      App.room.speak({ content: e.target.value })
+      App.chatrooms.speak({ content: e.target.value })
       event.target.value = ''
       event.preventDefault()
     }

@@ -2,8 +2,10 @@ class MessageBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(message)
-    ActionCable.server.
-    broadcast 'chat_channel', message: render_message(message)
+    ActionCable.server.broadcast "chatrooms:#{message.chatroom_id}", {
+      message: render_message(message),
+      chatroom_id: message.chatroom_id
+    }
   end
 
   private

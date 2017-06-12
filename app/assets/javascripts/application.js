@@ -17,5 +17,5 @@
 //= require_tree .
 
 $(document).on("turbolinks:load", () => {
-  messagesIndex.init();
+  chatroomsIndex.init();
 });
