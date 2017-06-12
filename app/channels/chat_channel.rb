@@ -1,6 +1,9 @@
 class ChatChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "chat_channel"
+    current_user.chatrooms.each do |chatroom|
+      stream_from "chat:#{chatroom.id}"
+    end
+    logger.add_tags
   end
 
   def unsubscribed
@@ -8,6 +11,7 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
+    binding.pry
     Messages::Create.call(data['message'])
   end
 end

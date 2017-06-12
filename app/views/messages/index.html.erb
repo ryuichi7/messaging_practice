@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-md-3">
       <div class="row chats-row">
+        <% current_user.chatrooms.each do |chatroom| %>
+          <%= chatroom.name %>
+        <% end %>
         <!-- <div class="col-md-12">
           <a href="#" class="list-group-item open-request">
             <p>Name:  Matthew Townsen</p>
