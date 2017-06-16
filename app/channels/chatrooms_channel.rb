@@ -10,6 +10,6 @@ class ChatroomsChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    Messages::Create.call(data['message'])
+    Messages::Create.call(data['message'].merge(user_id: current_user.id))
   end
 end

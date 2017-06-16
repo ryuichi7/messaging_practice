@@ -2,9 +2,11 @@
   <div class="row">
     <div class="col-md-3">
       <div class="row chats-row">
-        <% current_user.chatrooms.each do |chatroom| %>
-          <%= chatroom.name %>
-        <% end %>
+        <ul>
+          <% current_user.chatrooms.each do |chatroom| %>
+            <li> <%= link_to chatroom.name, chatroom_path(chatroom), remote: true %></li>
+          <% end %>
+        </ul>
         <!-- <div class="col-md-12">
           <a href="#" class="list-group-item open-request">
             <p>Name:  Matthew Townsen</p>
@@ -49,7 +51,7 @@
       </div>
       <div class="row current-chat-area">
         <div class="col-md-12">
-          <ul class="media-list" id='messages'>
+          <ul class="media-list" id='messages' data-chatroom='1'>
             <%= render @messages %>
           </ul>
         </div>

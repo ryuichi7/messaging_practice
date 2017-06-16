@@ -9,5 +9,5 @@ App.chatrooms = App.cable.subscriptions.create "ChatroomsChannel",
     chatroomsIndex.addMessage(data)
     chatroomsIndex.scrollToMessageBottom()
 
-  speak: (message) ->
-    @perform 'speak', message: message
+  speak: (data) ->
+    @perform 'speak', message: data

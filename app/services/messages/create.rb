@@ -8,7 +8,7 @@ module Messages
     private
 
     def self.create_message(params)
-      Message.create!(params.merge(user_id: 2, chatroom_id: 1))
+      Message.create!(params)
     end
   end
 end
