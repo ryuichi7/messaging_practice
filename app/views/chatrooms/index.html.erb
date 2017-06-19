@@ -1,0 +1,30 @@
+<div class='chatroomsIndex'>
+  <div class="chatroomsIndex__sidebar">
+    sidebar
+    <ul>
+      <% current_user.chatrooms.each do |chatroom| %>
+        <li> <%= link_to chatroom.name, chatroom_path(chatroom), remote: true %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="chatroomsIndex__messages">
+    <div class="chatroomsIndex__toolbar">
+      <button id="chat-leave" class="btn btn-default ticket-option" type="button">
+        <i class="glyphicon glyphicon-remove-sign"></i> Leave Chat
+      </button>
+      <button id="chat-invite" class="btn btn-default ticket-option" type="button">
+        <i class="glyphicon glyphicon-plus"></i> Invite
+      </button>
+    </div>
+    <div class="chatroomsIndex__messagesBody">
+      message box
+    </div>
+    <div class=" panel-footer chatroomsIndex__messagesFooter">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" data-behavior="room_speaker" autofocus="true">
+        </div>
+      </form>
+    </div>
+  </div>
+<div>
