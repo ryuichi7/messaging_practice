@@ -3,6 +3,7 @@ class ChatroomsController < ApplicationController
   respond_to :js
 
   def index
+    @messages = Message.all
   end
 
   def show

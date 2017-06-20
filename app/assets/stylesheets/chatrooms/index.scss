@@ -22,6 +22,8 @@
 
     .chatroomsIndex__messagesBody {
       flex-grow: 1;
+      overflow: auto;
+      height: 58vh;
     }
 
     .chatroomsIndex__messagesFooter {
@@ -30,41 +32,3 @@
     }
   }
 }
-
-
-// .chatroomsIndex {
-//   min-height: 100%;
-//
-//   .chatroomsIndex__sidebar {
-//     position: fixed;
-//     min-width: 30%;
-//     min-height: 100%;
-//     border: 1px solid $border_grey;
-//   }
-//
-//   .chatroomsIndex__messages {
-//     position: fixed;
-//     left: 30%;
-//     min-width: 70%;
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100%;
-//
-//     .chatroomsIndex__toolbar {
-//       padding: 10px;
-//       background-color: $light_grey;
-//     }
-//
-//     .chatroomsIndex__messagesBody {
-//       flex-grow: 1;
-//     }
-//
-//     .chatroomsIndex__messagesFooter {
-//       background-color: $light_grey;
-//       margin-bottom: 50px;
-//       padding-bottom: 0px;
-//     }
-//   }
-// }
-
-// use flex basis 30%
