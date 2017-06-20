@@ -11,9 +11,17 @@ const chatroomsIndex = (() => {
 
   function _sendMessage(e) {
     if (e.keyCode === 13) {
-      App.chatrooms.speak({ content: e.target.value, chatroom_id: $('#messages').data().chatroom })
+      debugger;
+      App.chatrooms.speak(_buildObject(e))
       event.target.value = ''
       event.preventDefault()
+    }
+  }
+
+  function _buildObject(e) {
+    return {
+      content: e.target.value,
+      chatroom_id: $('#messages').data().chatroom
     }
   }
 
