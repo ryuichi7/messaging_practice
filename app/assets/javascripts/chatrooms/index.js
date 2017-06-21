@@ -11,7 +11,6 @@ const chatroomsIndex = (() => {
 
   function _sendMessage(e) {
     if (e.keyCode === 13) {
-      debugger;
       App.chatrooms.speak(_buildObject(e))
       event.target.value = ''
       event.preventDefault()
