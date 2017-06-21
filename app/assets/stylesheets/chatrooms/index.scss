@@ -24,6 +24,14 @@
       flex-grow: 1;
       overflow: auto;
       height: 58vh;
+      display: flex;
+      flex-direction: column;
+
+      .message {
+        padding: 20px 0 20px 10px;
+        border: 0;
+        border-top: 1px solid #eeeeee;
+      }
     }
 
     .chatroomsIndex__messagesFooter {

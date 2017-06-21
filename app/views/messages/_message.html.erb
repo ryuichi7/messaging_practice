@@ -1,15 +1,12 @@
-<li class="media message">
-  <div class="media-body">
-    <div class="media">
-      <a class="pull-left" href="#">
-        <img class="media-object img-circle " src="https://app.teamsupport.com/dc/1078/UserAvatar/1839999/48/1470773165634">
-      </a>
-      <div class="media-body">
-        <p><%= message.content %></p>
-        <br>
-        <small class="text-muted">Alex Deo | 23rd June at 5:00pm</small>
-        <hr>
-      </div>
+<div class="message">
+  <div class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object img-circle " src="https://app.teamsupport.com/dc/1078/UserAvatar/1839999/48/1470773165634">
+    </a>
+    <div class="media-body">
+      <p><%= message.content %></p>
+      <br>
+      <small class="text-muted"><%= message.user.try(:username) %> | <%= message.created_at %></small>
     </div>
   </div>
-</li>
+</div>
