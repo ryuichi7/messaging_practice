@@ -1,1 +1,5 @@
-$('#messages').html('<%= j render @messages %>').data('chatroom', '<%= params[:id] %>')
+$('#messages')
+  .html('<%= j render @messages %>')
+  .data('chatroom', '<%= params[:id] %>')
+
+chatroomsIndex.scrollToMessageBottom(0);

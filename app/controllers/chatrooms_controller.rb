@@ -3,10 +3,18 @@ class ChatroomsController < ApplicationController
   respond_to :js
 
   def index
-    @messages = Message.all
+    @messages = Message.all.order(created_at: :asc)
   end
 
   def show
-    @messages = Chatroom.find(params[:id]).messages
+    @messages = get_messages
+  end
+
+  private
+
+  def get_messages
+    Message.where(
+      chatroom_id: params[:id]
+    ).order(created_at: :asc)
   end
 end

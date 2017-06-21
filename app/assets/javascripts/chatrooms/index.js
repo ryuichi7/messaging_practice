@@ -12,8 +12,8 @@ const chatroomsIndex = (() => {
   function _sendMessage(e) {
     if (e.keyCode === 13) {
       App.chatrooms.speak(_buildObject(e))
-      event.target.value = ''
-      event.preventDefault()
+      e.target.value = ''
+      e.preventDefault()
     }
   }
 
@@ -28,9 +28,9 @@ const chatroomsIndex = (() => {
     $('#messages').append(data.message)
   }
 
-  function scrollToMessageBottom() {
-    let $target = $('.current-chat-area')
-    $target.animate({ scrollTop: $target.prop("scrollHeight") });
+  function scrollToMessageBottom(seconds = 500) {
+    let $target = $('.chatroomsIndex__messagesBody')
+    $target.animate({ scrollTop: $target.prop("scrollHeight")}, seconds);
   }
 
   return {
